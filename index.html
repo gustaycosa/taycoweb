@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<!--[if lt IE 9 ]><html class="no-js oldie" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="es">
+<!--<![endif]-->
+
+<head>
+
+    <!--- basic page needs
+   ================================================== -->
+    <meta charset="utf-8">
+    <title>TAYCOSA</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+   ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+   ================================================== -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/img.css">
+
+    <!-- script
+   ================================================== -->
+    <script src="js/modernizr.js"></script>
+    <script src="js/pace.min.js"></script>
+
+    <!-- favicons
+	================================================== -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+
+<style>
+    @import url(http://fonts.googleapis.com/css?family=Roboto);
+
+    /****** LOGIN MODAL ******/
+    .loginmodal-container {
+      padding: 30px;
+      max-width: 350px;
+      width: 100% !important;
+      background-color: #F7F7F7;
+      margin: 0 auto;
+      border-radius: 2px;
+      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+      font-family: roboto;
+    }
+
+    .loginmodal-container h1 {
+      text-align: center;
+      font-size: 1.8em;
+      font-family: roboto;
+    }
+
+    .loginmodal-container input[type=submit] {
+      width: 100%;
+      display: block;
+      margin-bottom: 10px;
+      position: relative;
+    }
+
+    .loginmodal-container input[type=text], input[type=password] {
+      height: 44px;
+      font-size: 16px;
+      width: 100%;
+      margin-bottom: 10px;
+      -webkit-appearance: none;
+      background: #fff;
+      border: 1px solid #d9d9d9;
+      border-top: 1px solid #c0c0c0;
+      /* border-radius: 2px; */
+      padding: 0 8px;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      text-transform: uppercase;
+    }
+
+    .loginmodal-container input[type=text]:hover, input[type=password]:hover {
+      border: 1px solid #b9b9b9;
+      border-top: 1px solid #a0a0a0;
+      -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+      -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+      box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+    }
+
+    .loginmodal {
+      text-align: center;
+      font-size: 14px;
+      font-family: 'Arial', sans-serif;
+      font-weight: 700;
+      height: 36px;
+      padding: 0 8px;
+    /* border-radius: 3px; */
+    /* -webkit-user-select: none;
+      user-select: none; */
+    }
+
+    .loginmodal-submit {
+      /* border: 1px solid #3079ed; */
+      border: 0px;
+      color: #fff;
+      text-shadow: 0 1px rgba(0,0,0,0.1); 
+      background-color: #4d90fe;
+      padding: 17px 0px;
+      font-family: roboto;
+      font-size: 14px;
+      /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#4787ed)); */
+    }
+
+    .loginmodal-submit:hover {
+      /* border: 1px solid #2f5bb7; */
+      border: 0px;
+      text-shadow: 0 1px rgba(0,0,0,0.3);
+      background-color: #357ae8;
+      /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#357ae8)); */
+    }
+
+    .loginmodal-container a {
+      text-decoration: none;
+      color: #666;
+      font-weight: 400;
+      text-align: center;
+      display: inline-block;
+      opacity: 0.6;
+      transition: opacity ease 0.5s;
+    } 
+
+    .login-help{
+      font-size: 12px;
+    }
+</style>
+
+<body id="top">
+
+    <!-- header 
+   ================================================== -->
+    <header id="header" class="row">
+
+        <div class="header-logo">
+            <a href="index.html">TAYCOSA</a>
+        </div>
+
+        <nav id="header-nav-wrap">
+            <ul class="header-main-nav">
+                <li class="current"><a class="smoothscroll" href="#home" title="home">Inicio</a></li>
+                <li><a class="smoothscroll" href="#about" title="about">Acerca</a></li>
+                <li><a class="smoothscroll" href="#pricing" title="pricing">Productos</a></li>
+                <!--				<li><a class="smoothscroll"  href="#testimonials" title="testimonials">Testimonials</a></li>-->
+                <li><a class="smoothscroll" href="#download" title="download">Contacto</a></li>
+            </ul>
+
+            <a href="#" title="sign-up" data-toggle="modal" data-target="#login-modal" aria-label="Left Align" class="btn btn-warning" style="color:white;">Iniciar Sesion</a>
+        </nav>
+
+        <a class="header-menu-toggle" href="#"><span>Menu</span></a>
+
+    </header> <!-- /header -->
+
+    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="loginmodal-container">
+                <h1>Reporteador TAYCOSA</h1><br>
+                <form id="frminicio" method="POST" action="SR/comprobarusuario.php">
+                    <input type="text" name="usuario" id="usuario" placeholder="Ingrese su usuario">
+                    <input type="password" autocomplete="current-password" name="password" id="password" placeholder="Ingrese su password">
+                    <input type="submit" name="Iniciar sesion" class="login loginmodal-submit" onClick="entrar();" value="Login">
+                </form>
+                <div class="login-help">
+                    <a href="#">No puedo entrar</a> - 
+                    <a href="http://taycosa.mx:2095" target="blank">Correo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- home
+   ================================================== -->
+    <section id="home" data-parallax="scroll" data-image-src="images/hero-bg.jpg" data-natural-width=3000 data-natural-height=2000>
+
+        <div class="overlay"></div>
+        <div class="home-content">
+
+            <div class="row contents">
+                <div class="home-content-left">
+
+                    <h3 data-aos="fade-up">Bienvenido a TAYCOSA</h3>
+
+                    <h1 data-aos="fade-up">
+                        Venta de maquinaria JCB, <br>
+                        refacciones, <br>
+                        servicios y mas!
+                    </h1>
+
+                    <div class="buttons" data-aos="fade-up">
+                        <a href="#download" class="smoothscroll button stroke">
+                            <span class="icon-circle-down" aria-hidden="true"></span>
+                            Ver productos
+                        </a>
+                        <a href="#" data-lity class="button stroke">
+                            <span class="icon-play" aria-hidden="true"></span>
+                            Contactanos
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="home-image-right">
+                    <img src="images/iphone-app-470.png" srcset="images/iphone-app-470.png 1x, images/iphone-app-940.png 2x" data-aos="fade-up">
+                </div>
+            </div>
+
+        </div> <!-- end home-content -->
+
+        <ul class="home-social-list">
+            <li>
+                <a href="#"><i class="fa fa-facebook-square"></i></a>
+            </li>
+        </ul>
+        <!-- end home-social-list -->
+
+        <div class="home-scrolldown">
+            <a href="#about" class="scroll-icon smoothscroll">
+                <span>Scrolea Abajo</span>
+                <i class="icon-arrow-right" aria-hidden="true"></i>
+            </a>
+        </div>
+
+    </section> <!-- end home -->
+
+
+    <!-- about
+    ================================================== -->
+    <section id="about">
+
+        <div class="row about-intro">
+
+            <div class="col-four">
+                <h1 class="intro-header" data-aos="fade-up">Acerca de TAYCOSA</h1>
+            </div>
+            <div class="col-eight">
+                <p class="lead" data-aos="fade-up">
+                    Nos dedicamos a la venta de maquinaria pesada para el ramo agricola y de contruccion, asi como venta y distribucion de refacciones y servicio a maquinaria pesada.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="row about-features">
+
+            <div class="features-list block-1-3 block-m-1-2 block-mob-full group">
+
+                <div class="bgrid feature" data-aos="fade-up">
+
+                    <span class="icon"><i class="icon-window"></i></span>
+
+                    <div class="service-content">
+
+                        <h3>Venta de refacciones</h3>
+
+                        <p>Nos encargamos de provisionarle las refacciones y los kit necesarios para su maquinaria JCB, tambien contamos con refacciones genericas y aceites.
+                        </p>
+
+                    </div>
+
+                </div> <!-- /bgrid -->
+
+                <div class="bgrid feature" data-aos="fade-up">
+
+                    <span class="icon"><i class="icon-image"></i></span>
+
+                    <div class="service-content">
+                        <h3>Venta de maquinaria nueva y usada</h3>
+
+                        <p>¿Busca algo en especial? podemos ofrecerle el mejor equipo JCB nuevo y listo para la accion, asi como tambien contamos con equipo con horas trabajadas a buen precio.
+                        </p>
+
+                    </div>
+
+                </div> <!-- /bgrid -->
+
+                <div class="bgrid feature" data-aos="fade-up">
+
+                    <span class="icon"><i class="icon-paint-brush"></i></span>
+
+                    <div class="service-content">
+                        <h3>Servicios preventivos y correctivos</h3>
+
+                        <p>¿Su maquinaria falla? ¿o simplemente busca realizar el mantenimiento debido? en TAYCOSA le ayudamos y orientamos con los servicios correspondiente.
+                        </p>
+
+                    </div>
+
+                </div> <!-- /bgrid -->
+
+            </div> <!-- end features-list -->
+
+        </div> <!-- end about-features -->
+
+        <div class="row about-how">
+
+            <h1 class="intro-header" data-aos="fade-up">¿Como solicito un servicio?</h1>
+
+            <div class="about-how-content" data-aos="fade-up">
+                <div class="about-how-steps block-1-2 block-tab-full group">
+
+                    <div class="bgrid step" data-item="1">
+                        <h3>Contacta a TAYCOSA</h3>
+                        <p>Contactanos via telefonica o via email, cuentanos que lo deseas.
+                        </p>
+                    </div>
+
+                    <div class="bgrid step" data-item="2">
+                        <h3>Evaluacion</h3>
+                        <p>Evaluamos las mejores opciones disponibles para su maquinaria pesada.
+                        </p>
+                    </div>
+
+                    <div class="bgrid step" data-item="3">
+                        <h3>Te cotizamos</h3>
+                        <p>Nuestro personal te creara una cotizacion de lo que buscas y te la enviara lo antes posible.
+                        </p>
+                    </div>
+
+                    <div class="bgrid step" data-item="4">
+                        <h3>Servicio</h3>
+                        <p>Si la cotizacion te convence nuestro personal pondra manos a la obra.
+                        </p>
+                    </div>
+                </div>
+            </div> <!-- end about-how-content -->
+        </div>
+    </section> <!-- end about -->
+
+    <!-- pricing
+    ================================================== -->
+
+    <style>
+
+    </style>
+    <section id="pricing" style="background:#FFF;">
+        <div id="divmaquinaria" class="container">
+            <h2>maqinaria jcb</h2>
+            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                <a id="jcb_retroescavador" class="col-sm-12" target="_blank" href="pdf/JCB-3CX-Global-Folleto.pdf"></a>
+                <span>retroexcavadora</span>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                <a id="jcb_fastrac" class="col-sm-12" target="_blank" href="pdf/Fastrac-Serie-3000-Folleto-Ingles.pdf"></a>
+                <span>fastrac</span>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                <a id="jcb_telescopico" class="col-sm-12" target="_blank" href="pdf/JCB-Manipuladores-Telescopicos-Construccion.compressed.pdf"></a>
+                <span>telescopico</span>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                <a id="jcb_cfrontal" class="col-sm-12" target="_blank" href="pdf/JCB-WLS-426-436-Folleto.pdf"></a>
+                <span>cargador frontal</span>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                <a id="jcb_teletruk" class="col-sm-12" target="_blank" href="pdf/JCB-GAMA_TELETRUK.pdf"></a>
+                <span>teletrux</span>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                <a id="jcb_minicargador" class="col-sm-12" target="_blank" href="pdf/JCB-1CX-1CXT-Mini-Retroexcavadora.pdf"></a>
+                <span>minicargador</span>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                <a id="jcb_miniexcavadora" class="col-sm-12" target="_blank" href="pdf/JCB-3CX-Global-Folleto.pdf"></a>
+                <span>excavadora</span>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                <a id="jcb_miniretroexcavadora" class="col-sm-12" target="_blank" href="pdf/JCB-1CX-1CXT-Mini-Retroexcavadora.pdf"></a>
+                <span>mini retroexcavadora</span>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+
+        <div class="footer-main">
+            <div class="row">
+
+                <div class="col-three md-1-3 tab-1-2 mob-full footer-contact">
+
+                    <h4>Contacto</h4>
+
+                    <p>
+                        Bouluevard ejercito mexicano #247<br>
+                        el paraiso gomez palacio, durango, mexico <br>
+                        cp 35115<br>
+                    </p>
+
+                    <p>
+                        antonio.mora@taycosa.mx <br>
+                        tel: (871) 887 4403 <br>
+                    </p>
+
+                </div> <!-- end footer-contact -->
+
+                <div class="col-two md-1-3 tab-1-2 mob-full footer-site-links">
+
+                    <h4>Mapa del sitio</h4>
+
+                    <ul class="list-links">
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Acerca</a></li>
+                        <li><a href="#">Productos</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+
+                </div> <!-- end footer-site-links -->
+
+                <div class="col-four md-1-2 tab-full footer-subscribe">
+
+                    <h4>Nuestro Newsletter</h4>
+
+                    <p>Suscribete a nuestro newsletter y recibe ofertas y catalogos de nuestras nuevas adquisiciones.</p>
+
+                    <div class="subscribe-form">
+
+                        <form id="mc-form" class="group" novalidate="true">
+
+                            <input type="email" value="" name="EMAIL" class="email" id="mc-email" placeholder="correo electronico" required="">
+
+                            <input type="submit" name="subscribe" value="Enviar">
+
+                            <label for="mc-email" class="subscribe-message"></label>
+
+                        </form>
+
+                    </div>
+
+                </div> <!-- end footer-subscribe -->
+
+            </div> <!-- /row -->
+        </div> <!-- end footer-main -->
+
+
+        <div class="footer-bottom">
+
+            <div class="row">
+
+                <div class="col-twelve">
+                    <div class="copyright">
+                        <span>© Copyright TAYCOSA 2018.</span>
+                        <span>Design by <a href="#">TAYCOSA</a></span>
+                    </div>
+
+                    <div id="go-top">
+                        <a class="smoothscroll" title="Back to Top" href="#top"><i class="icon-arrow-up"></i></a>
+                    </div>
+                </div>
+
+            </div> <!-- end footer-bottom -->
+
+        </div>
+
+    </footer>
+
+    <div id="preloader">
+        <div id="loader"></div>
+    </div>
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {},
+            Tawk_LoadStart = new Date();
+        (function() {
+            var s1 = document.createElement("script"),
+                s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/577bde3bf0d239ad43916a99/default';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+
+    </script>
+    <!--End of Tawk.to Script-->
+</body>
+
+</html>

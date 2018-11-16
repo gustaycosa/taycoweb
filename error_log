@@ -1,0 +1,22 @@
+[02-Nov-2018 12:15:52 America/Mexico_City] PHP Fatal error:  Uncaught SoapFault exception: [soap:Server] Server was unable to process request. ---> There is already an open DataReader associated with this Command which must be closed first. in /home/taycosam/public_html/AutOrden.php:71
+Stack trace:
+#0 /home/taycosam/public_html/AutOrden.php(71): SoapClient->__call('AutOrden', Array)
+#1 /home/taycosam/public_html/AutOrden.php(71): SoapClient->AutOrden(Array)
+#2 {main}
+  thrown in /home/taycosam/public_html/AutOrden.php on line 71
+[10-Nov-2018 10:51:55 America/Mexico_City] PHP Warning:  include(head.php): failed to open stream: No such file or directory in /home/taycosam/public_html/maq-retro.php on line 8
+[10-Nov-2018 10:51:55 America/Mexico_City] PHP Warning:  include(head.php): failed to open stream: No such file or directory in /home/taycosam/public_html/maq-retro.php on line 8
+[10-Nov-2018 10:51:55 America/Mexico_City] PHP Warning:  include(): Failed opening 'head.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/taycosam/public_html/maq-retro.php on line 8
+[10-Nov-2018 10:51:55 America/Mexico_City] PHP Warning:  include(header.php): failed to open stream: No such file or directory in /home/taycosam/public_html/maq-retro.php on line 12
+[10-Nov-2018 10:51:55 America/Mexico_City] PHP Warning:  include(header.php): failed to open stream: No such file or directory in /home/taycosam/public_html/maq-retro.php on line 12
+[10-Nov-2018 10:51:55 America/Mexico_City] PHP Warning:  include(): Failed opening 'header.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/taycosam/public_html/maq-retro.php on line 12
+[10-Nov-2018 10:51:55 America/Mexico_City] PHP Warning:  include(footer.php): failed to open stream: No such file or directory in /home/taycosam/public_html/maq-retro.php on line 63
+[10-Nov-2018 10:51:55 America/Mexico_City] PHP Warning:  include(footer.php): failed to open stream: No such file or directory in /home/taycosam/public_html/maq-retro.php on line 63
+[10-Nov-2018 10:51:55 America/Mexico_City] PHP Warning:  include(): Failed opening 'footer.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/taycosam/public_html/maq-retro.php on line 63
+[10-Nov-2018 10:51:55 America/Mexico_City] PHP Warning:  include(script.php): failed to open stream: No such file or directory in /home/taycosam/public_html/maq-retro.php on line 64
+[10-Nov-2018 10:51:55 America/Mexico_City] PHP Warning:  include(script.php): failed to open stream: No such file or directory in /home/taycosam/public_html/maq-retro.php on line 64
+[10-Nov-2018 10:51:55 America/Mexico_City] PHP Warning:  include(): Failed opening 'script.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/taycosam/public_html/maq-retro.php on line 64
+[10-Nov-2018 10:54:30 America/Mexico_City] PHP Parse error:  syntax error, unexpected '<' in /home/taycosam/public_html/head.php on line 2
+[10-Nov-2018 10:55:55 America/Mexico_City] PHP Parse error:  syntax error, unexpected '<' in /home/taycosam/public_html/head.php on line 2
+[10-Nov-2018 12:07:02 America/Mexico_City] PHP Parse error:  syntax error, unexpected '<' in /home/taycosam/public_html/header.php on line 2
+[10-Nov-2018 12:07:25 America/Mexico_City] PHP Parse error:  syntax error, unexpected '<' in /home/taycosam/public_html/header.php on line 2

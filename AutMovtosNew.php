@@ -3,11 +3,11 @@
 
 <?php include("head-tayco.php"); ?>
 
-<body>
 <body style="padding: 0px; margin: 0px"  >
 <div class='centrar'>
 <div style="text-align: center; " class="style2" bgcolor="#99CCCC">DataWareHose - Autorizacion de Ordenes de Compra </div>
         <table style="width:100%;">
+            <tr>
             <td  width="90px">
 <?php
 $iId = $_GET['Id'];
@@ -45,7 +45,7 @@ echo '<img alt="" src="img/NoAut.png" height="80" width="80" />';
 ?>
 </td>
 <td  style="text-align: center;"  bgcolor="#CCFF99">
- <Label ID="lblResultado" ForeColor="Black"> <?php echo ($Cadena)  ?> </asp:Label>
+ <Label ID="lblResultado" ForeColor="Black"> <?php echo ($Cadena)  ?> </Label>
 </td>
 </tr>
         </table>

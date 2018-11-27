@@ -12,7 +12,7 @@
 
     <?php include('header.php');?>
     <?php include('login.php');?>
-    <section id="home" data-parallax="scroll" data-image-src="images/hero-bg.jpg" data-natural-width=3000 data-natural-height=2000>
+    <section id="home" data-parallax="scroll" data-image-src="data:image/jpeg;base64,<?php include('back.php');?>" data-natural-width=3000 data-natural-height=2000>
 
         <div class="overlay"></div>
         <div class="home-content">
@@ -62,11 +62,8 @@
             </a>
         </div>
 
-    </section> <!-- end home -->
+    </section>
 
-
-    <!-- about
-    ================================================== -->
     <section id="about">
 
         <div class="row about-intro">
@@ -99,7 +96,7 @@
 
                     </div>
 
-                </div> <!-- /bgrid -->
+                </div>
 
                 <div class="bgrid feature" data-aos="fade-up">
 
@@ -113,7 +110,7 @@
 
                     </div>
 
-                </div> <!-- /bgrid -->
+                </div>
 
                 <div class="bgrid feature" data-aos="fade-up">
 
@@ -127,11 +124,11 @@
 
                     </div>
 
-                </div> <!-- /bgrid -->
+                </div>
 
-            </div> <!-- end features-list -->
+            </div>
 
-        </div> <!-- end about-features -->
+        </div>
 
         <div class="row about-how">
 
@@ -164,49 +161,35 @@
                         </p>
                     </div>
                 </div>
-            </div> <!-- end about-how-content -->
+            </div>
         </div>
-    </section> <!-- end about -->
+    </section>
 
-    <!-- pricing
-    ================================================== -->
-
-    <style>
-
-    </style>
     <section id="pricing" style="background:#FFF;">
         <div id="divmaquinaria" class="container">
             <h2>maqinaria jcb</h2>
             <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                <a id="jcb_retroescavador" class="col-sm-12" href="maq-retro.php"></a>
+                <a id="jcb_retroescavador" class="col-sm-12" href="maq/maq-retrx.php"></a>
                 <span>retroexcavadora</span>
             </div>
-<!--            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                <a id="jcb_fastrac" class="col-sm-12" target="_blank" href="maq-cfrontal.php"></a>
-                <span>fastrac</span>
-            </div>-->
             <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                <a id="jcb_telescopico" class="col-sm-12" href="maq-teleh.php"></a>
+                <a id="jcb_telescopico" class="col-sm-12" href="maq/maq-teleh.php"></a>
                 <span>telescopico</span>
             </div>
             <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                <a id="jcb_cfrontal" class="col-sm-12" href="maq-cfrontal.php"></a>
+                <a id="jcb_cfrontal" class="col-sm-12" href="maq/maq-cfrontal.php"></a>
                 <span>cargador frontal</span>
             </div>
-<!--            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                <a id="jcb_teletruk" class="col-sm-12" target="_blank" href=""></a>
-                <span>teletrux</span>
-            </div>-->
             <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                <a id="jcb_minicargador" class="col-sm-12" href="maq-mcarg.php"></a>
+                <a id="jcb_minicargador" class="col-sm-12" href="maq/maq-mcarg.php"></a>
                 <span>minicargador</span>
             </div>
             <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                <a id="jcb_miniexcavadora" class="col-sm-12" href="maq-mexca.php"></a>
+                <a id="jcb_miniexcavadora" class="col-sm-12" href="maq/maq-excav.php"></a>
                 <span>excavadora</span>
             </div>
             <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
-                <a id="jcb_miniretroexcavadora" class="col-sm-12" href="maq-retrx.php"></a>
+                <a id="jcb_miniretroexcavadora" class="col-sm-12" href="maq/maq-mexca.php"></a>
                 <span>mini retroexcavadora</span>
             </div>
         </div>
@@ -214,7 +197,7 @@
 
     <?php include('footer.php');?>
     <?php include('script.php');?>
-    <!--End of Tawk.to Script-->
+
 </body>
 
 </html>
